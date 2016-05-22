@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaveletTransform", "WaveletTransform\WaveletTransform.csproj", "{A98256D6-B5CB-4672-9A0B-328587AC6202}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{C706E533-11E3-4EFA-A9B6-D4494FCC1985}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A98256D6-B5CB-4672-9A0B-328587AC6202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A98256D6-B5CB-4672-9A0B-328587AC6202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A98256D6-B5CB-4672-9A0B-328587AC6202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A98256D6-B5CB-4672-9A0B-328587AC6202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C706E533-11E3-4EFA-A9B6-D4494FCC1985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C706E533-11E3-4EFA-A9B6-D4494FCC1985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C706E533-11E3-4EFA-A9B6-D4494FCC1985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C706E533-11E3-4EFA-A9B6-D4494FCC1985}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

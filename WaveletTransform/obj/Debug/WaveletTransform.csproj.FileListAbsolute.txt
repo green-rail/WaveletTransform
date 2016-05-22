@@ -1,0 +1,10 @@
+C:\Users\Администратор\Dropbox\dev\WaveletTransform\WaveletTransform\bin\Debug\WaveletTransform.dll
+C:\Users\Администратор\Dropbox\dev\WaveletTransform\WaveletTransform\bin\Debug\WaveletTransform.pdb
+C:\Users\Администратор\Dropbox\dev\WaveletTransform\WaveletTransform\obj\Debug\WaveletTransform.csprojResolveAssemblyReference.cache
+C:\Users\Администратор\Dropbox\dev\WaveletTransform\WaveletTransform\obj\Debug\WaveletTransform.dll
+C:\Users\Администратор\Dropbox\dev\WaveletTransform\WaveletTransform\obj\Debug\WaveletTransform.pdb
+D:\green_rail\Dropbox\dev\WaveletTransform\WaveletTransform\bin\Debug\WaveletTransform.dll
+D:\green_rail\Dropbox\dev\WaveletTransform\WaveletTransform\bin\Debug\WaveletTransform.pdb
+D:\green_rail\Dropbox\dev\WaveletTransform\WaveletTransform\obj\Debug\WaveletTransform.csprojResolveAssemblyReference.cache
+D:\green_rail\Dropbox\dev\WaveletTransform\WaveletTransform\obj\Debug\WaveletTransform.dll
+D:\green_rail\Dropbox\dev\WaveletTransform\WaveletTransform\obj\Debug\WaveletTransform.pdb
