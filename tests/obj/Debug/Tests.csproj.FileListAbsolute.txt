@@ -19,3 +19,4 @@ D:\green_rail\Dropbox\dev\WaveletTransform\Tests\bin\Debug\WaveletTransform.pdb
 D:\green_rail\Dropbox\dev\WaveletTransform\Tests\bin\Debug\SignalGenerator.pdb
 D:\green_rail\Dropbox\dev\WaveletTransform\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
 C:\Users\Администратор\Dropbox\dev\WaveletTransform\Tests\bin\Debug\LENA1.bmp
+D:\green_rail\Dropbox\dev\WaveletTransform\Tests\bin\Debug\LENA1.bmp

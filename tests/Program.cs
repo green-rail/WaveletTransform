@@ -16,7 +16,8 @@ namespace Tests
             Program prog = new Program();
             List<Wavelet> Daublets = WaveletConstructor.CreateAllDaubechies();
             List<Wavelet> Symlets = WaveletConstructor.CreateAllSymlets();
-            prog.Test1();
+            //prog.Test1();
+            prog.TestGetSet2d(Symlets);
             //prog.Test2D(Symlets);
             //prog.TestGetSet(Daublets);
             
@@ -152,8 +153,6 @@ namespace Tests
             {
                 for (int j = 0; j < OrImage.Height; j++)
                 {
-                    //Col = OrImage.GetPixel(i, j);
-                    //int buff = (Int32)AuxFunctions.Scale(-1, 1, 0, 255, ImageVals[i,j]);
                     int buff = (Int32)AuxFunctions.Scale(-1, 1, 0, 255, ImageVals[i,j]);
                     Col = Color.FromArgb(buff, buff, buff);
                     OrImage.SetPixel(i, j, Col);
@@ -161,7 +160,6 @@ namespace Tests
             }
 
             OrImage.Save("processed.bmp");
-            //OrImage.Save(@"\processed.png");
         }
 
         public void TestGetSet(List<Wavelet> waves)
@@ -180,6 +178,26 @@ namespace Tests
             foreach (Double val in Details1) Console.WriteLine(val);
             Console.WriteLine("and here's new coefs:");
             foreach (Double val in Ssig) Console.WriteLine(val);
+        }
+        public void TestGetSet2d(List<Wavelet> wavelets)
+        {
+            Double[,] Signal = { { 0, 1, 2, 3 }, { 4, 5, 6, 7 }, { 8, 9, 10, 11 }, { 12, 13, 14, 15 } };
+            Double[] details = Transform.GetAllDetail(Signal, 1);
+            Transform.SetAllDetail(details, Signal, 1);
+
+            /*
+            foreach(Double det in details)
+            {
+                Console.Write(det + " ");
+            }
+
+            Console.ReadKey();
+            */
+            foreach (Double det in Signal)
+            {
+                Console.WriteLine(det + " ");
+            }
+
         }
     }
 }
