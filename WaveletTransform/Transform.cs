@@ -377,14 +377,15 @@ namespace WaveletTransform
 
         public static void SetAllDetail(Double[] input, Double[,] coefs, Int32 currentLevel)
         {
-            Int32 Shift = input.Length >> currentLevel;
-            Int32 Len = input.GetLength(0) >> currentLevel;
+            Int32 Shift = coefs.Length >> currentLevel;
+            Int32 Len = coefs.GetLength(0) >> currentLevel;
             Int32 InpIndex = 0;
 
-            for (int lev = 1; lev > currentLevel; lev++)
+            //for (int lev = 1; lev > currentLevel; lev++)
+            for (int lev = currentLevel; lev > 0; lev--)
             {
-                Int32 Bound = input.GetLength(0) >> lev - 1;
-                Len = input.GetLength(0) >> lev;
+                Int32 Bound = coefs.GetLength(0) >> lev - 1;
+                Len = coefs.GetLength(0) >> lev;
                 for (int i = 0; i < Len; i++)
                 {
                     for (int j = Len; j < Bound; j++)
