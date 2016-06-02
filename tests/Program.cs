@@ -16,9 +16,10 @@ namespace Tests
             Program prog = new Program();
             List<Wavelet> Daublets = WaveletConstructor.CreateAllDaubechies();
             List<Wavelet> Symlets = WaveletConstructor.CreateAllSymlets();
+            List<Wavelet> Coiflets = WaveletConstructor.CreateAllCoiflets();
             //prog.Test1();
-            prog.TestGetSet2d(Symlets);
-            //prog.Test2D(Symlets);
+            //prog.TestGetSet2d(Symlets);
+            prog.Test2D(Symlets);
             //prog.TestGetSet(Daublets);
             
             /*
@@ -38,7 +39,7 @@ namespace Tests
             elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
             Console.WriteLine("Test Fast finished in " + elapsedTime);
             */
-            Console.ReadKey();
+            //Console.ReadKey();
         }
 
         void Test1()
@@ -147,8 +148,8 @@ namespace Tests
                     ImageVals[i, j] = AuxFunctions.Scale(0, 255, -1, 1, Col.R);
                 }
             }
-            Transform.FastForward2d(ImageVals, out ImageVals, wavelets[1], 3);
-            Transform.FastInverse2d(ImageVals, out ImageVals, wavelets[1], 3);
+            Transform.FastForward2d(ImageVals, out ImageVals, wavelets[9], 4);
+            Transform.FastInverse2d(ImageVals, out ImageVals, wavelets[9], 4);
             for (int i = 0; i < OrImage.Width; i++)
             {
                 for (int j = 0; j < OrImage.Height; j++)
