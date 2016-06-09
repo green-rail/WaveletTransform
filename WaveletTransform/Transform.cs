@@ -338,7 +338,6 @@ namespace WaveletTransform
         }
         public static Double[] GetAllDetail(Double[,] input, Int32 currentLevel)
         {
-            Int32 Shift = input.Length >> currentLevel;
             Int32 Len = input.GetLength(0) >> currentLevel;
             Double[] output = new Double[input.GetLength(0)* input.GetLength(0) - (Len * Len) ];
             Int32 OutIndex = 0;
@@ -370,6 +369,42 @@ namespace WaveletTransform
                         output[OutIndex] = input[i, j];
                         OutIndex++;
                     }
+                }
+            }
+            return output;
+        }
+
+        public static Double[] GetDetailOfLevel(Double[,] input, Int32 level)
+        {
+            Int32 Len = input.GetLength(0) >> level;
+            int lev = level;
+            Int32 Bound = input.GetLength(0) >> lev - 1;
+            //Double[] output = new Double[input.GetLength(0)* input.GetLength(0) - (Len * Len) ];
+            Double[] output = new Double[Bound * Bound - (Len * Len) ];
+            Int32 OutIndex = 0;
+
+            for (int i = 0; i < Len; i++)
+            {
+                for (int j = Len; j < Bound; j++)
+                {
+                    output[OutIndex] = input[i, j];
+                    OutIndex++;
+                }
+            }
+            for (int i = Len; i < Bound; i++)
+            {
+                for (int j = 0; j < Len; j++)
+                {
+                    output[OutIndex] = input[i, j];
+                    OutIndex++;
+                }
+            }
+            for (int i = Len; i < Bound; i++)
+            {
+                for (int j = Len; j < Bound; j++)
+                {
+                    output[OutIndex] = input[i, j];
+                    OutIndex++;
                 }
             }
             return output;
@@ -409,6 +444,39 @@ namespace WaveletTransform
                         coefs[i, j] = input[InpIndex]; 
                         InpIndex++;
                     }
+                }
+            }
+        }
+        public static void SetDetailofLevel(Double[] input, Double[,] coefs, Int32 level)
+        {
+            Int32 Len = coefs.GetLength(0) >> level;
+            Int32 InpIndex = 0;
+
+            Int32 lev = level;
+            Int32 Bound = coefs.GetLength(0) >> lev - 1;
+            Len = coefs.GetLength(0) >> lev;
+            for (int i = 0; i < Len; i++)
+            {
+                for (int j = Len; j < Bound; j++)
+                {
+                    coefs[i, j] = input[InpIndex]; 
+                    InpIndex++;
+                }
+            }
+            for (int i = Len; i < Bound; i++)
+            {
+                for (int j = 0; j < Len; j++)
+                {
+                    coefs[i, j] = input[InpIndex]; 
+                    InpIndex++;
+                }
+            }
+            for (int i = Len; i < Bound; i++)
+            {
+                for (int j = Len; j < Bound; j++)
+                {
+                    coefs[i, j] = input[InpIndex]; 
+                    InpIndex++;
                 }
             }
         }

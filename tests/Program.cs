@@ -18,8 +18,8 @@ namespace Tests
             List<Wavelet> Symlets = WaveletConstructor.CreateAllSymlets();
             List<Wavelet> Coiflets = WaveletConstructor.CreateAllCoiflets();
             //prog.Test1();
-            //prog.TestGetSet2d(Symlets);
-            prog.Test2D(Symlets);
+            prog.TestGetSet2d(Symlets);
+            //prog.Test2D(Symlets);
             //prog.TestGetSet(Daublets);
             
             /*
@@ -39,7 +39,7 @@ namespace Tests
             elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
             Console.WriteLine("Test Fast finished in " + elapsedTime);
             */
-            //Console.ReadKey();
+            Console.ReadKey();
         }
 
         void Test1()
@@ -183,12 +183,14 @@ namespace Tests
         public void TestGetSet2d(List<Wavelet> wavelets)
         {
             Double[,] Signal = { { 0, 1, 2, 3 }, { 4, 5, 6, 7 }, { 8, 9, 10, 11 }, { 12, 13, 14, 15 } };
-            Double[] details = Transform.GetAllDetail(Signal, 1);
+            //Double[] details = Transform.GetAllDetail(Signal, 1);
+            Double[] details = Transform.GetDetailOfLevel(Signal, 2);
             for (int i = 0; i < details.Length; i++)
             {
                 details[i] = 666;
             }
-            Transform.SetAllDetail(details, Signal, 1);
+            //Transform.SetAllDetail(details, Signal, 1);
+            Transform.SetDetailofLevel(details, Signal, 2);
 
             /*
             foreach(Double det in details)
