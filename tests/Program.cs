@@ -18,7 +18,8 @@ namespace Tests
             List<Wavelet> Symlets = WaveletConstructor.CreateAllSymlets();
             List<Wavelet> Coiflets = WaveletConstructor.CreateAllCoiflets();
             //prog.Test1();
-            prog.TestGetSet2d(Symlets);
+            //prog.TestGetSet2d(Symlets);
+            Console.WriteLine("Daublet 10 length:" + Daublets[0].FilterLength);
             //prog.Test2D(Symlets);
             //prog.TestGetSet(Daublets);
             

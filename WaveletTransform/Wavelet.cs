@@ -14,6 +14,11 @@ namespace WaveletTransform
 
         public string Name;
 
+        public Int32 FilterLength
+        {
+            get { return DecompositionLow.Length; }
+        }
+
         public Wavelet(string name, double[] DecLowPass) //For orthogonal wavelets
         {
             Name = name;
